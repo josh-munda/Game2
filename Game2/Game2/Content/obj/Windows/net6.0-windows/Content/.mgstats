@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Josh/Desktop/Game2/Game2/Game2/Content/exit.png","C:/Users/Josh/Desktop/Game2/Game2/Game2/Content/bin/Windows/Content/exit.xnb","TextureProcessor","Texture2DContent",405,16469,0.1434351
+"C:/Users/Josh/Desktop/Game2/Game2/Game2/Content/start.png","C:/Users/Josh/Desktop/Game2/Game2/Game2/Content/bin/Windows/Content/start.xnb","TextureProcessor","Texture2DContent",417,16469,0.0026495
