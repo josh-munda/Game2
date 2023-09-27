@@ -26,15 +26,18 @@ namespace Game2.Screens
             spriteFont = content.Load<SpriteFont>("arial");
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GraphicsDevice graphics)
         {
             MouseState mouseState = Mouse.GetState();
 
             // use mouse to select button
             if(currentGameState == GameState.StartScreen)
             {
-                Rectangle startButtonRec = new Rectangle(300, 300, startButton.Width, startButton.Height);
-                Rectangle exitButtonRec = new Rectangle(350, 350, exitButton.Width, exitButton.Height);
+                int screenWidth = graphics.Viewport.Width;
+                int screenHeight = graphics.Viewport.Height;
+
+                Rectangle startButtonRec = new Rectangle(screenWidth / 2 - startButton.Width, screenHeight / 2 - startButton.Height, startButton.Width, startButton.Height);
+                Rectangle exitButtonRec = new Rectangle(screenWidth / 2 - exitButton.Width, screenHeight / 2 + startButton.Height, exitButton.Width, exitButton.Height);
 
                 // Go to gameplay screen when start button is clicked
                 if(startButtonRec.Contains(mouseState.Position) && mouseState.LeftButton == ButtonState.Pressed)
