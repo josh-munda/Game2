@@ -14,19 +14,32 @@ namespace Game2.Screens
     public class StartScreen
     {
         private GameState currentGameState;
-        private Texture2D startButton;
-        private Texture2D exitButton;
+        public Texture2D StartButton;
+        public Texture2D ExitButton;
         private SpriteFont spriteFont;
-        private SpriteBatch spriteBatch;
+        private GraphicsDevice graphics;
+        //private ContentManager contentManager;
+
+
+        public StartScreen(GraphicsDevice graphicsDevice)
+        {
+            this.graphics = graphicsDevice;
+            currentGameState = GameState.StartScreen;
+        }
+
+        public void Initialize()
+        {
+
+        }
 
         public void LoadContent(ContentManager content)
         {
-            startButton = content.Load<Texture2D>("start");
-            exitButton = content.Load<Texture2D>("exit");
+            StartButton = content.Load<Texture2D>("start");
+            ExitButton = content.Load<Texture2D>("exit");
             spriteFont = content.Load<SpriteFont>("arial");
         }
 
-        public void Update(GraphicsDevice graphics)
+        public void Update(GameTime gameTime)
         {
             MouseState mouseState = Mouse.GetState();
 
@@ -36,8 +49,8 @@ namespace Game2.Screens
                 int screenWidth = graphics.Viewport.Width;
                 int screenHeight = graphics.Viewport.Height;
 
-                Rectangle startButtonRec = new Rectangle(screenWidth / 2 - startButton.Width, screenHeight / 2 - startButton.Height, startButton.Width, startButton.Height);
-                Rectangle exitButtonRec = new Rectangle(screenWidth / 2 - exitButton.Width, screenHeight / 2 + startButton.Height, exitButton.Width, exitButton.Height);
+                Rectangle startButtonRec = new Rectangle(screenWidth / 2 - StartButton.Width, screenHeight / 2 - StartButton.Height, StartButton.Width, StartButton.Height);
+                Rectangle exitButtonRec = new Rectangle(screenWidth / 2 - ExitButton.Width, screenHeight / 2 + StartButton.Height, ExitButton.Width, ExitButton.Height);
 
                 // Go to gameplay screen when start button is clicked
                 if(startButtonRec.Contains(mouseState.Position) && mouseState.LeftButton == ButtonState.Pressed)
@@ -53,15 +66,15 @@ namespace Game2.Screens
             }
         }
 
-        public void Draw(GameTime gameTime)
+        public void Draw(SpriteBatch spriteBatch)
         {
             if(currentGameState == GameState.StartScreen)
             {
                 spriteBatch.Begin();
 
                 spriteBatch.DrawString(spriteFont, $"Target Practice", new Vector2(250, 100), Color.White);
-                spriteBatch.Draw(startButton, new Vector2(300, 300), Color.White);
-                spriteBatch.Draw(exitButton, new Vector2(350, 350), Color.White);
+                spriteBatch.Draw(StartButton, new Vector2(300, 300), Color.White);
+                spriteBatch.Draw(ExitButton, new Vector2(350, 350), Color.White);
                 
 
                 spriteBatch.End();

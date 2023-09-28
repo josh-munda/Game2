@@ -1,5 +1,6 @@
 ﻿using Game2.StateManagement;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,16 @@ namespace Game2.Screens
     {
         // Current screen
         private GameplayScreen currentScreen;
+        private ContentManager contentManager;
+
+        public GameplayScreen CurrentScreen => currentScreen;
+
+        public ScreenManager(ContentManager contentManager)
+        {
+            this.contentManager = contentManager;
+            
+        }
+
 
         /// <summary>
         /// Changes the screens

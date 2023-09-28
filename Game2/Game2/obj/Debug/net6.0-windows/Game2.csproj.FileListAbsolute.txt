@@ -1,5 +1,8 @@
+C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Content\arial.xnb
+C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Content\crosshair.xnb
 C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Content\exit.xnb
 C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Content\start.xnb
+C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Content\target.xnb
 C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Game2.exe
 C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Game2.deps.json
 C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Game2.runtimeconfig.json

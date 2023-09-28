@@ -12,6 +12,20 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Content\arial.spritefont" />
+    <None Remove="Content\crosshair.png" />
+    <None Remove="Content\exit.png" />
+    <None Remove="Content\start.png" />
+    <None Remove="Content\target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\arial.spritefont" />
+    <Content Include="Content\crosshair.png" />
+    <Content Include="Content\exit.png" />
+    <Content Include="Content\start.png" />
+    <Content Include="Content\target.png" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
   </ItemGroup>
