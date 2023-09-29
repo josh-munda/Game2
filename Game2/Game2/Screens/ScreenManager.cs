@@ -7,23 +7,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Game2.Screens
 {
     public class ScreenManager
     {
-        // Current screen
-        private GameplayScreen currentScreen;
+        private StartScreen currentScreen;
+        private GameplayScreen nextScreen;
         private ContentManager contentManager;
 
-        public GameplayScreen CurrentScreen => currentScreen;
+        public StartScreen CurrentScreen => currentScreen;
+        public GameplayScreen NextScreen => nextScreen;
 
-        public ScreenManager(ContentManager contentManager)
+        public ScreenManager(ContentManager contentManager, StartScreen startScreen, GameplayScreen newScreen)
         {
             this.contentManager = contentManager;
-            
+            currentScreen = startScreen;
+            currentScreen.Initialize();
+            nextScreen = newScreen;
+            nextScreen.Initialize();
         }
-
 
         /// <summary>
         /// Changes the screens
@@ -31,8 +35,8 @@ namespace Game2.Screens
         /// <param name="newScreen">The new screen</param>
         public void ChangeScreen(GameplayScreen newScreen)
         {
-            currentScreen = newScreen;
-            currentScreen.Initialize();
+            nextScreen = newScreen;
+            nextScreen.Initialize();
         }
 
         /// <summary>

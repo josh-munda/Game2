@@ -40,3 +40,6 @@ C:\Users\Josh\Desktop\Game2\Game2\Game2\obj\Debug\net6.0-windows\refint\Game2.dl
 C:\Users\Josh\Desktop\Game2\Game2\Game2\obj\Debug\net6.0-windows\Game2.pdb
 C:\Users\Josh\Desktop\Game2\Game2\Game2\obj\Debug\net6.0-windows\Game2.genruntimeconfig.cache
 C:\Users\Josh\Desktop\Game2\Game2\Game2\obj\Debug\net6.0-windows\ref\Game2.dll
+C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Content\gamemusic-6082.wma
+C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Content\gamemusic-6082.xnb
+C:\Users\Josh\Desktop\Game2\Game2\Game2\bin\Debug\net6.0-windows\Content\shotgun-firing-4-6746.xnb

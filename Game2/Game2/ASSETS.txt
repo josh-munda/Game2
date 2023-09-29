@@ -1,1 +1,11 @@
-﻿
+﻿Content/crosshair.png - created by Josh Munda on Piskel.com (https://www.piskelapp.com/)
+
+Content/exit.png - created by Josh Munda on Piskel.com (https://www.piskelapp.com/)
+
+Content/start.png - created by Josh Munda on Piskel.com (https://www.piskelapp.com/)
+
+Content/target.png - created by Josh Munda on Piskel.com (https://www.piskelapp.com/)
+
+Content/gamemusic-6082 - created by Pixabay on Pixabay.com (https://pixabay.com/sound-effects/gamemusic-6082/) released under CC0 license
+
+Content/shotgun-firing-4-6746 - created by Pixabay on Pixabay.com (https://pixabay.com/sound-effects/shotgun-firing-4-6746/) released under CC0 license

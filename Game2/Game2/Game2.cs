@@ -35,10 +35,10 @@ namespace Game2
             //screenManager.ChangeScreen(new GameplayScreen(_graphicsDevice));
 
             _graphicsDevice = GraphicsDevice;
-            screenManager = new ScreenManager(Content);
             startScreen = new StartScreen(_graphicsDevice);
             gameplayScreen = new GameplayScreen(_graphicsDevice);
-            screenManager.ChangeScreen(startScreen);
+            screenManager = new ScreenManager(Content, startScreen, gameplayScreen);
+            //screenManager.ChangeScreen(startScreen);
 
             base.Initialize();
         }
@@ -46,7 +46,7 @@ namespace Game2
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            //screenManager = new ScreenManager(Content);
+            screenManager = new ScreenManager(Content, startScreen, gameplayScreen);
 
             // TODO: use this.Content to load your game content here
             startScreen.LoadContent(Content);
@@ -59,22 +59,41 @@ namespace Game2
                 Exit();
 
             // TODO: Add your update logic here
-
+            /*
             switch (currentGameState)
             {
                 case GameState.StartScreen:
                     startScreen.Update(gameTime);
-                    if (/* Add logic to switch to gameplay screen */)
+                    if (startScreen.IsStartClicked)
                     {
                         currentGameState = GameState.Game;
-                        screenManager.ChangeScreen(gameplayScreen);
+                        screenManager.ChangeScreen(startScreen, gameplayScreen);
                     }
                     break;
 
                 case GameState.Game:
                     gameplayScreen.Update(gameTime);
-                    // Add logic to switch back to the start screen if needed
                     break;
+            }
+            */
+            if (currentGameState == GameState.StartScreen)
+            {
+                startScreen.Update(gameTime);
+
+                if (startScreen.IsStartClicked)
+                {
+                    currentGameState = GameState.Game;
+                    screenManager.ChangeScreen(gameplayScreen);
+                }
+
+                if (startScreen.IsExitClicked)
+                {
+                    Exit();
+                }
+            }
+            else if (currentGameState == GameState.Game)
+            {
+                gameplayScreen.Update(gameTime);
             }
 
 
@@ -85,7 +104,7 @@ namespace Game2
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.White);
 
             // TODO: Add your drawing code here
             switch (currentGameState)

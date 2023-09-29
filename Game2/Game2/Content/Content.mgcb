@@ -44,6 +44,18 @@
 /processorParam:TextureFormat=Color
 /build:exit.png
 
+#begin gamemusic-6082.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:gamemusic-6082.mp3
+
+#begin shotgun-firing-4-6746.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:shotgun-firing-4-6746.wav
+
 #begin start.png
 /importer:TextureImporter
 /processor:TextureProcessor

@@ -22,7 +22,7 @@ namespace Game2
         public Vector2 Velocity { get; set; }
 
         // The bounds of the target 
-        public Rectangle Bounds => new Rectangle((int)Position.X, (int)Position.Y, target.Width, target.Height);
+        public Rectangle Bounds => new Rectangle((int)Position.X, (int)Position.Y, 35, 35);
 
         // If the target is active on the game screen
         public bool IsActive { get; set; } = true;
@@ -59,12 +59,12 @@ namespace Game2
                 int screenWidth = graphics.Viewport.Width;
                 int screenHeight = graphics.Viewport.Height;
 
-                if (Position.X + target.Width > screenHeight || Position.X < 0)
+                if (Position.X + 35 > screenHeight || Position.X < 0)
                 {
                     Velocity = new Vector2(-Velocity.X, Velocity.Y);
                 }
 
-                if (Position.Y + target.Height > screenWidth || Position.Y < 0)
+                if (Position.Y + 35 > screenWidth || Position.Y < 0)
                 {
                     Velocity = new Vector2(Velocity.X, -Velocity.Y);
                 }
